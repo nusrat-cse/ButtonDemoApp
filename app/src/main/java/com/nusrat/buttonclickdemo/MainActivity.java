@@ -1,6 +1,8 @@
 package com.nusrat.buttonclickdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -14,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void gotoNewActivity(View view) {
-        Toast.makeText(MainActivity.this,"Button Click hoise!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this,"Button Click hoise!",
+                Toast.LENGTH_SHORT).show();
+        Intent gotoActivity=new Intent(MainActivity.this,SecondActivity.class);
+        startActivity(gotoActivity);
     }
 }
